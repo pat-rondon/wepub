@@ -36,7 +36,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www
 <body>' > $TMP
 
 for url in $@; do
-    curl $url -s -o - >> $TMP
+    curl $url -s -o - | w3hxselect "#content" >> $TMP
     dieIfFailed "Could not download $url" 2
 done
 
