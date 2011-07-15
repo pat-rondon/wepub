@@ -1,0 +1,58 @@
+wepub: Fetches Wikipedia pages and turns them into an EPUB eBook
+================================================================
+
+Requirements
+------------
+
+- Bash
+- Calibre
+- cURL
+- html-xml-utils
+
+Usage
+-----
+
+The following shows a typical use of wepub:
+
+  wepub britcoms.epub http://en.wikipedia.org/wiki/Mr._Bean ...
+
+The first parameter to wepub is the name of the EPUB file to output
+to, while the remaining parameters are the URLs of the Wikipedia pages
+to include in the book. Each page is included in the order it appears
+on the command line.
+
+If the .epub suffix does not appear in the name of the output file, it
+will be added. The optional -t flag is used to specify a title to
+include in the EPUB's metadata. Thus, the following command line
+produces a file called bc.epub whose title metadata is set to "British
+Comedies":
+
+  wepub -t "British Comedies" bc http://en.wikipedia.org/wiki/Mr._Bean ...
+
+License
+-------
+
+Copyright (c) 2011, Patrick Rondon
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer. Redistributions
+in binary form must reproduce the above copyright notice, this list of
+conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
