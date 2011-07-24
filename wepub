@@ -86,6 +86,7 @@ for url in $@; do
       curl "$url" -s -o - \
     | w3hxselect "#content" \
     | w3hxprune -c "thumb tright" \
+    | w3hxprune -c "editsection" \
       >> "$TMP"
     dieIfFailed "Could not download $url" 2
 done
